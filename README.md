@@ -64,12 +64,19 @@ Similar to GitHub we have other platform as well one is BitBucket, GitLab, Sourc
 [Click Here, Best GitHub Alternatives to Host Open Source Projects](https://www.tecmint.com/github-alternatives-to-host-open-source-projects/)
 
 > **GitHub can be also used as a portfolio to show that you are an active developer**
+
 Example - If you show that I have a lot of projects on my GitHub Repository then a lot of recruites actually visit your profile to see that your contribution in projects or opensource project.And Many recruiters hire developers from GitHub as well.
 
 **Only developers can undersatnd HOW IMPORTANT GITHUB IS?**
 
-## 2. Social Coding with GitHub
+**Git and GitHub, They both although sound same, they are support each other But they're not same exactly.**
 
+
+## 2. Social Coding with GitHub
+Let's explore Git as a website.
+1. Search in google [GitHub] ![image](https://github.com/user-attachments/assets/ed9ca872-0186-457a-91a5-b584d2905678)
+2.
+3.
 ## Miscellaneous Git Tools
 
 ## Rewriting History
