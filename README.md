@@ -72,11 +72,58 @@ Example - If you show that I have a lot of projects on my GitHub Repository then
 **Git and GitHub, They both although sound same, they are support each other But they're not same exactly.**
 
 
-## 2. Social Coding with GitHub
 Let's explore Git as a website.
-1. Search in google [GitHub] ![image](https://github.com/user-attachments/assets/ed9ca872-0186-457a-91a5-b584d2905678)
-2.
-3.
+1. Search in google [GitHub]
+ ![image](https://github.com/user-attachments/assets/7deb0458-457c-44e5-8047-a483e1ab1008)
+
+2. [Click Here,GitHub Official Doc](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
+3. If you don't have created Account earlier,Click on Sign Up Button
+   ![image](https://github.com/user-attachments/assets/5e092107-437d-4ceb-84a1-0927e3b2794f)
+4. Enter Your Email,UserName,Password
+   ![image](https://github.com/user-attachments/assets/fa1dfa41-594e-41dc-8546-40e723891abc)
+5. If you have an account on GitHub earlier, Simply Sign In by sing your Username/Email and Password
+6. Once you're Sign in on GitHub Website, You will be landing on GitHub Home Page or you can say DashBoard of GitHub
+   ![image](https://github.com/user-attachments/assets/891bfd57-e18c-4639-b2bd-667bc72138d1)
+
+7. You'll see repository, repository is like your folder or project
+   ![image](https://github.com/user-attachments/assets/ae0087d3-5b7b-475d-8ffd-ded1260700f4)
+8. You'll see all activities things related to your followings and changes you made recently
+   ![image](https://github.com/user-attachments/assets/5901c89e-235c-41ff-bb9e-31983b0d75a7)
+9. You can see your Profile, there yoy can see your repositories/projects and contribution or commit graphs(green dot box) and all stuffs
+    ![image](https://github.com/user-attachments/assets/3bc6f138-65fd-49de-ab88-2ab2d318937a)
+    ![image](https://github.com/user-attachments/assets/d37d8e5f-c465-4437-9d54-a981771ad1e6)
+
+10. Basically you should explore all the sections out there!!
+
+- **How to create a new repository/import repository/**, Simply left of your profile there will be + sign button
+  ![image](https://github.com/user-attachments/assets/5ce68d23-3299-4b18-8e63-73b4d3c73ffb)
+
+### How do we create Central Repository?
+- Before that Let's understand **Why Central Repository is required?**
+- Everyone knows in Git, there are 3 stages 1> Working Directory 2> Staging Area 3> Local Repo Commits, all these three things are on your local system.
+  So suppose Developer 1 has its Git project on his local machine, similarly another Developer 2 has also his on Git Project on his local machine.
+  If Developer 1 wants to work on a project on its own, only one person Developer 1, Then Developer 1 can use Git in his local System that's perfectly fine. Similar is true for Developer 2 also.
+
+  But What if Developer 1 and Developer 2 and more n Developers wants to contribute or work on a single project.Then they need something called **Server or central Repository**.
+  This Central repository will contain the final code that everyone can see, push or pull who is working on that project.
+  So Developer 2 will see there are some changes over here on central repository then I need to pull the code.
+  
+  ![image](https://github.com/user-attachments/assets/b38ce7a4-03ad-4c51-9294-2f942f5f00ac)
+
+ - Let's see **How do we create Central Repository?**
+   1. Open GitHub Log in & you'll land on GitHub Home Page, there will be + sign button click you will see dropdown list there you will find New Repository option.
+      ![image](https://github.com/user-attachments/assets/f54bda06-4800-4178-81c4-7968b18311b3)
+
+  ![image](https://github.com/user-attachments/assets/2f768d52-f715-4a52-b53b-9fcb487009ee)
+
+
+   
+  
+  
+
+
+## 2. Social Coding with GitHub
+
 ## Miscellaneous Git Tools
 
 ## Rewriting History
