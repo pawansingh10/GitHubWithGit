@@ -114,12 +114,46 @@ Let's explore Git as a website.
    1. Open GitHub Log in & you'll land on GitHub Home Page, there will be + sign button click you will see dropdown list there you will find New Repository option.
       ![image](https://github.com/user-attachments/assets/f54bda06-4800-4178-81c4-7968b18311b3)
 
-  ![image](https://github.com/user-attachments/assets/2f768d52-f715-4a52-b53b-9fcb487009ee)
+      ![image](https://github.com/user-attachments/assets/2f768d52-f715-4a52-b53b-9fcb487009ee)
 
 
-   
+   2. As you create a New Repository, You will get a pop and option like this to create a new repository on the Command line
+      ```shell
+         echo "# GitHub101" >> README.md
+         git init
+         git add README.md
+         git commit -m "first commit"
+         git branch -M main
+         git remote add origin git@github.com:pawansingh10/GitHub101.git
+         git push -u origin main
+      ```
+     
+      ![image](https://github.com/user-attachments/assets/3ce7e2db-e530-46d8-b19c-f3f673cc48a1)
   
+      Creating README.md & Adding README.md to staging area
+      Creating Main Branch as Master Slave Concept is now not recommendable for Git, So basically renaming it to Main Branch + Checking the Branch Details which we have created
+      ![image](https://github.com/user-attachments/assets/01dbd03f-82f8-4728-ab8e-b86a0b6efb51)
+ 
+      ![image](https://github.com/user-attachments/assets/20dcd502-28a9-47d4-b73b-fdb73ff45941)
   
+      Setting GitHub Repository path to our Local Git
+      ![image](https://github.com/user-attachments/assets/f8e344b4-a127-47ea-9336-d7c2670adf85)
+  
+      Setting URL of your GitHub Repository if permissed denied without https path.
+      ![image](https://github.com/user-attachments/assets/0873d312-04b5-49fd-af56-08962af61d30)
+
+      Pushing you data from your local git repository to GitHub server main branch repository, for the first time
+      ![image](https://github.com/user-attachments/assets/ae751282-2058-4715-8c25-ec9d87f231b1)
+
+      Now you will see on your Git-GitHub Repository the README.md file will be uploaded into your repository
+
+      Next Let's create one more file intro.txt but your intro save this on your local git repository
+      ![image](https://github.com/user-attachments/assets/2c96986d-9d24-4ef0-b75a-25fc6b183ce3)
+
+      Now pushing it to your Server GitHub Repository
+      ![image](https://github.com/user-attachments/assets/50b9d225-e171-4a39-abd1-3c95a055c7c6)
+
+      ![image](https://github.com/user-attachments/assets/bafd1c25-d506-481f-9a0e-f6d004077172)
 
 
 ## 2. Social Coding with GitHub
