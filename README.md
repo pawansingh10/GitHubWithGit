@@ -155,6 +155,29 @@ Let's explore Git as a website.
 
       ![image](https://github.com/user-attachments/assets/bafd1c25-d506-481f-9a0e-f6d004077172)
 
+- **Token Authentication Error**
+Whever you have to push your code to the GitHub Repository or Central Repository. So you have to authenticate yourself that This is my User_ID and Password.
+Once GitHub authenticate that you're a real user, then it allows you to push/pull or whatever you want to do on GitHub?
+For Authentication there are 3 ways:-
+1. **User_ID and Password**, Problem with User_ID and password is it's less secure.So Now GitHub does support this after 2021, instead they came with PAT
+2. **PAT - Personal Access Token**, These are token based authentication
+3. **SSH**, This is more secure
+
+So Without TAP or SSH Authentication, You won't be able to push your code to GitHub, bcuz GitHud doesn't support User_ID, Password. 
+
+Let's see **How do we Authentication with Personal Access Token?** or How to create the Personal Access Token?
+- Open GitHub Account >> Got to Profile >> Setting >> Developer Setting >> Personal Access Token >> Generate a new Token
+  You can write 1. Note as Demo or for what purpose, Put 2. Expiry Date - No Expiry 3. Select Scope - Repository blah blah So Create for Everything  >> Generate token 
+
+  ![image](https://github.com/user-attachments/assets/2fc12669-31ea-49ba-b04c-5ab2428729ed)
+
+  Once you have PAT, Setup it with Windows Credential Manager for that >> Control Panel > Search for Windows Credential > Search GitHub replace your password with PAToken.
+
+  PAT works over the https, so if your repository is in https they you can use PAT.
+  But you have created repository on SSH, in that case you have to use SSH Key
+
+  Lets see **SSH Key**
+
 
 ## 2. Social Coding with GitHub
 
