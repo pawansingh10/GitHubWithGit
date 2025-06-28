@@ -393,6 +393,24 @@ So, If you want to contribute to any other project/open source.
 
 
 ### Making a Pull Request
+Pull Request is one of the brilliant idea in GitHub. With Pull request, you can contribute to someone else's code.
+You can say that - Hey I have made some modification on your code or written a new file or created a feature or fixed a bug and i'm sending you a pull request.So please pull the code that I have written.Bcuz you can't push the code to someone else central GitHub Repository. 
+
+Why is it not call push request, why is it called as pull request?
+This because you're asking the other person to pull your code that you have written.
+
+Let's see How to create a pull request?
+Create a New folder Searching write a python file linearSearch.py under you PythonForked repository
+Add the file to your local git repository
+Commit it to your local git repository
+push it to your GitHub Central repository
+![image](https://github.com/user-attachments/assets/4b856357-dcc3-4235-9ca5-1bddba0289d5)
+
+
+Then from your GitHub Home page create a pull request to original source from where you forked the Repository.
+![image](https://github.com/user-attachments/assets/0bc3e720-e2e4-4218-a7a1-fd04655b58cb)
+
+### Merging a Pull Request
 
 
 ## Miscellaneous Git Tools
