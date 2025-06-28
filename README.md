@@ -310,10 +310,90 @@ We have 2 ways to push/fetch our code to Central GitHub repository through you r
   ![image](https://github.com/user-attachments/assets/f87c7252-c9f5-446c-81e5-1ab9f021bc6e)
 - Now you can make changes in the file and play around these make commits and all but all on your local Git Repository.
 - If you want to make changes or contribute to the other you can't do it here. We will see that in next section.
-**Summary, We have seen how to clone a repositor**
+**Summary, We have seen how to clone a repository**
 
+So We're done with GitHub basics, we will see advance topic in next section
 
 ## 2. Social Coding with GitHub
+
+Here in this section, we will deep dive into GitHub, 
+- How can we collaborate with other developer's projects?
+- How can we create a network of developers?
+- other features related to GitHub
+
+### Fetching Changes from GitHub
+How do you take changes, whatever the changes that has been done or uploaded by other developers in any project/repository/code?
+So How can we download those changes?
+One thing we can do is clone the repository again and again but a repository every time will download the complete repository.
+So Here we can do that by **git fetch**
+
+The ```shell git fetch``` command downloads commits, files and refs from a remote repository into your loca repo
+Although if you have different branches on GitHub so you can specify from which branch you want to take changes ```shell git fetch <remote> <branch>```
+
+So ```shell git fetch``` can take those changes from GitHub Server repository to your local repository not in working Directory or staging area.
+There is one more command after **git fetch** that we have to do to take those changes and to reflect it in our local working directory ```shell git ```
+
+So Let say if some other developer is contributing to your project and he added a new file newdeveloper.html there and you  want to fetch the file into local Git Repository
+Now I want to keep my local git repository up to date as a synchronisation.
+
+So If you check what are your remotes, remotes are like this local repository is connected with a central GitHub repository with a remote.
+```shell git remote -v ``
+![image](https://github.com/user-attachments/assets/8a61166a-3429-46e4-8e0f-050d7abbcb3e)
+We have 2 remotes origin and myremote both are referencing or pointing to the same central repository which is our GitHub Repository. So we can use any of them.
+
+Now, ```shell git fetch ``` will be fine if you have only one branch which is in this case that is master branch But if you have multiple branches over there on your central repository in that case you have to specify from which branch and by which remote you want to fetch ```shell git fetch origin master```
+![image](https://github.com/user-attachments/assets/772c51c8-5077-41f1-a0bd-1d173569cc17) ![image](https://github.com/user-attachments/assets/0a7edec5-a8d8-4d36-a4ed-de398e8904b7)
+
+So the last commit from Central GitHub Server Repository  master branch has been downloaded to your local git repository, but you will not see that commit into your local git working directory that's bcuz git fetch only do chnages from central server to local git repository there is one more step if you want to see the changes into your local working directory is ```shell git merge <remote><branch>```.
+
+![image](https://github.com/user-attachments/assets/175dc7bb-316a-4fcc-8347-cdb2243aafb1)
+
+If you want to delete the extra remote which you had created then write command ```shell git remote remove <remote_name>```
+![image](https://github.com/user-attachments/assets/6306ba64-9b26-414a-b85f-177d090dc66d)
+
+### Pulling changes from GitHub
+Similar to ```shell git fetch``` there is also a commad called ```shell git pull``` 
+Que : What's the difference between ```shell git fetch``` and ```shell git pull```?
+Ans - To overcome the two commands ```shell git fetch origin master``` and  ```shell git merge <remote><branch>```, git pull found helpful in just one command ```shell git pull```
+     git pull takes changes from central server repository to directy local git working directory. 
+
+> **git pull = git fetch + git merge**
+> There is disadvantage also.
+
+Now suppose another developer added files to central github repository and made commits now you want to pull it So lets see how we can do it by git pull instead of git fetch like last time
+![image](https://github.com/user-attachments/assets/a010c431-73bf-473c-9c66-76cb30defdf9)
+
+One Question will arise, Out of git fetch and git pull which one should be preferred?
+It's up you, if you're working on alone no other collaborator then you can use git pull but some time if you use git pull there can be issue of merge conflicts(when the same file is changed by two different branch/developers and they try to merge them)
+So safer way is to first fetch and do whatever changes you want to do, commits and all and at last once you are satisfied then merge it.
+
+End Goal/result of both git fetch and git pull is same. 
+
+### From this point onwards you can start working/contributing on other open source projects/repository on GitHub
+### Forking a repository
+Let's see How to fork a repository?
+What deos mean by forking a repository?
+
+So, If you want to contribute to any other project/open source.
+- The first step is to fork a repository into your profile
+  - How do we do that?
+  - There is an option on top right **fork**
+  - Create a new fork
+  ![image](https://github.com/user-attachments/assets/87ec16dc-0a6a-4920-9313-e69bc71a37c8)
+
+- You will the whole repository come to your profile as well and also the path is highlighted from where you forked (actual repository)
+  ![image](https://github.com/user-attachments/assets/9f3f537f-1362-4272-aafe-f89259b4a338)
+  - If you will see any new commits or changes in that case you can fetch and upstream but as of now both your forked repo and the source from where you forked both are same
+  - This is now your repository, you can now play around with it, you can do whatever you want to.
+  - How can you do anything?
+  - Clone this repository to your local git repository, We're taking this code from your profile forked repository not the original source Just for your reminder. So we're not downloading or cloning from Original source and will do all stuff.
+     - copy repository HTTP URL
+     - ```shell git clone <HTTP URL>```
+     ![image](https://github.com/user-attachments/assets/add2d6b2-d1e8-49ba-bbdf-6288bcf3ee76)
+
+
+### Making a Pull Request
+
 
 ## Miscellaneous Git Tools
 
