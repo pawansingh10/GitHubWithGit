@@ -388,7 +388,7 @@ So, If you want to contribute to any other project/open source.
   - How can you do anything?
   - Clone this repository to your local git repository, We're taking this code from your profile forked repository not the original source Just for your reminder. So we're not downloading or cloning from Original source and will do all stuff.
      - copy repository HTTP URL
-     - ```shell git clone <HTTP URL>```
+     - ``` git clone <HTTP URL>```
      ![image](https://github.com/user-attachments/assets/add2d6b2-d1e8-49ba-bbdf-6288bcf3ee76)
 
 
@@ -458,15 +458,15 @@ But but but What If Owner/maintainer added one file to the original repository o
    - Now your forked branch is sync with the original source repository with same commits.
 > This is how we sync our forked repository with upstream i.e the Original source repository.
 
-- If you go to your local git repository, and you check the ```shell git status ``` It will shows you are up to date, up to date with your forked repository not with the original source repository
+- If you go to your local git repository, and you check the ``` git status ``` It will shows you are up to date, up to date with your forked repository not with the original source repository
   - This is bcuz you have only remote for your Forked GitHub repository not the original source repository
-  - ```shell git remote -v```
+  - ``` git remote -v```
   - So You can add the remote for original Source Repository from where you forked the repository, So How do we do that?
-     - Simply Go to Original Source Repository  >> Go to the Code >> Copy the HTTPS URL Link ```shell git remote add <upstream_remote> <Original Source Repo URL>```
+     - Simply Go to Original Source Repository  >> Go to the Code >> Copy the HTTPS URL Link ``` git remote add <upstream_remote> <Original Source Repo URL>```
      - Now you will have two remotes one is origin and another is upstream_remote But here in upstream_remote you will only have permission to fetch not to push bcuz you're not the owner of the original Sorce repository
-     -  So Now you want to fetch/pull from original Souce repo, you can use the remote upstream_remote and then pull it from there ```shell git pull upstream_remote <Original Source Repo URL>```
+     -  So Now you want to fetch/pull from original Souce repo, you can use the remote upstream_remote and then pull it from there ``` git pull upstream_remote <Original Source Repo URL>```
      -  Now all the files and folders will be downloaded and you will see them in your local git repository
-     -  And If you check the log ```shell git log --oneline``` you will all the commits
+     -  And If you check the log ``` git log --oneline``` you will all the commits
 
 
 ### GitHub Pages
@@ -487,7 +487,7 @@ So far we have covered lot of Git Tools, Git Commands  that we use to our day to
 But Here We will see some **Miscellaneous Git Commands, Miscellaneous Git Tools** that sometime you use for some additional benefits that Git provides to you.
 
 ### Display the changes in a commit
-```shell git show <commit_id>```
+``` git show <commit_id>```
 
 ☝️ You can actually look what changes you have amde in any specific commit.
 
@@ -530,26 +530,26 @@ Now we will see How we will apply slashing to get back to our feature branch coo
 ### Apply Slashing
 Let's see How do we go back to the cool branch and get the same file.
 You can create multiple stashes and also stash uses gi diff internally.
-To see all stashes that you created use command ```shell git stash list```
+To see all stashes that you created use command ``` git stash list```
 ![image](https://github.com/user-attachments/assets/c4792888-702f-4481-806b-2ce66a3fc004)
-To get back the stash you want use command ```shell git stash apply <stash name>```
+To get back the stash you want use command ``` git stash apply <stash name>```
 ![image](https://github.com/user-attachments/assets/b0457760-f787-4b2a-8e2b-436d4b8635f5)
 
 Now meanwhike you're working you again get urgent task. So you can create another stash 
-So check the how many stashes are there? ```shell git stash list``` you'll have only one stash@{0} and you need the new stash so you can delete this stash ```shell git stash drop stash@{0}```
+So check the how many stashes are there? ``` git stash list``` you'll have only one stash@{0} and you need the new stash so you can delete this stash ``` git stash drop stash@{0}```
 ![image](https://github.com/user-attachments/assets/36cfa813-31c6-4f45-8298-8cfc8b269d13)
-Now You want to create another one ```shell git stash ```
+Now You want to create another one ``` git stash ```
 
 Sometime It becomes important that you're working on a feature and you have to move to a different branch So you can stash those changes & it will be stored in stack.
 
 ### Cleaning Working Repository
-So Another Solution for the problem of dirty Working directory is - Just clean your working directory ```shell git clean``` delete the every change that you made after that particular commit.
+So Another Solution for the problem of dirty Working directory is - Just clean your working directory ``` git clean``` delete the every change that you made after that particular commit.
 
 - **You may not want to stash some work or files in your working directory, but simply get rid of them; that's what the git clean command is for**
-```shell git clean -f -d``` -f & -d stands for forcefully deleting all the directory
+``` git clean -f -d``` -f & -d stands for forcefully deleting all the directory
 
 But we can simply delete the file, why this **git clean** command is there?
-If you have create/made/change one file you can manually delete that. But by any chance if you created/changed/madified different-2 lots of file and you don't remember what changes you have made in which files then you can't delete those changes manually and still you want to clean your working directory. You want to go back to the last commits which you made. So How can we do this is ```shell git clean -f -d```
+If you have create/made/change one file you can manually delete that. But by any chance if you created/changed/madified different-2 lots of file and you don't remember what changes you have made in which files then you can't delete those changes manually and still you want to clean your working directory. You want to go back to the last commits which you made. So How can we do this is ``` git clean -f -d```
 
 Now Suppose you created a dummy.html in your cool_branch and in meantime you got a call to work on main branch. So You have to jump to main branch but you don't want to stash your changes in cool_branch neither you want to commit. So what you can do is - clean your working directory ```
 
@@ -567,13 +567,13 @@ Most often funtionality or use case of re-writing history is How do you change t
 And this is most often or many times happens. Why this happens? let's say you made a commit and then you realized by mistake, I have added a file that I don't want to add or may be I have not added the file that I actually wanted to add or I have made a typo in the message. So the last commit is the most often modified by the developers.
 
 So, Let's understand How to modify the last commit that you just made?
-For Example in our case manager told us to fix a bug in Home.html master branch. So If you look at the history/commit/version ```shell git log --oneline```
-So last commit was Very important fixed in Home.html but that was not a fixed actually I had just added a line of code. ypu can check ```shell git show <commit_id>``` 
+For Example in our case manager told us to fix a bug in Home.html master branch. So If you look at the history/commit/version ``` git log --oneline```
+So last commit was Very important fixed in Home.html but that was not a fixed actually I had just added a line of code. ypu can check ``` git show <commit_id>``` 
 So wrote a wrong message over there on last commit and Now I want to rename/rewrite/change that message. This happens most often many a time.
 ![image](https://github.com/user-attachments/assets/393d4c12-875f-42f6-a1a5-0498c06fb276)
 
 Changing the message of the last commit
-```shell git commit --amend```
+``` git commit --amend```
 What it will do is open a text editor **Vim Text Editor** This we have already used when we got Merge Conflict.
 ![image](https://github.com/user-attachments/assets/196c16bf-7811-420f-9983-9354e56642d1)
 What you can do is :- esc + i to write on Vim Text editor and the esc + : wq hit enter
@@ -586,7 +586,7 @@ Let's see How do we make the actual change in the last commit which we made.
 
 If i wanted to add more file or wanted to more modification in same commit which was my last commit then How can I do that?
 Here idea will remain same command will remain same.
-```shell git commit --amend```
+``` git commit --amend```
 - Changing the actual content of the last commit.
   - Step 1. Make changes in the working directory
   - Step 2. Add files to the satging area
@@ -606,21 +606,21 @@ It is not necessarily that you can change only last commit you can change last 3
 Now, Let's see How do we go back to the past any commit that we want?
 
 - We can travel the time to go in the past to any specific commits
-  ```shell git checkout <commit_id>```
+  ``` git checkout <commit_id>```
 
 Earlier We have used **checkout** to go from one branch to another branch. So checkout is not only for the branches, it can be used at different-2 places. basically checkout simply means I want to go there.
 
 Suppose You want to go to a specific version which is one of the initial commit and why I want to go there bcuz inside that commit there is a folder and there I created a very important file/code. Since I don't have this abc folder I want to go back this commit and I want to understand what all files we had.And i want to take one important file out and use this file as my new feature or use the code written inside.
 
 So Let's do it :-
-1. Check your project history/commits/versions ```shell git log --oneline```
+1. Check your project history/commits/versions ``` git log --oneline```
 2. Pick and copy the commit_id from where you want to go
-3. Do ```shell git checkout <commit_id>```
+3. Do ``` git checkout <commit_id>```
 A lot of files and folders after that specific commit will be deleted  from your local git repository.
 ![image](https://github.com/user-attachments/assets/1f3f26d8-b10e-46f1-bf13-572149cffa6f)
 ![image](https://github.com/user-attachments/assets/7b4882fc-806b-474b-9e0f-f5d0175940d4)
 
-But Why I back to this same commit.
+But Why I back to this same commit bcuz I wanted to go back 
 
 
 ## Rewriting History
