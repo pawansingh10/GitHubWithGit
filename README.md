@@ -476,9 +476,152 @@ So If you have a static website that doesn't have a backend like NodeJS or Djang
 Even if you have a dynamic website based on JavaScript like if you have only FrontEnd and you want o host it may be somewhere, then GitHub is one of the best platform to host your website like your Portfolio type of Website.
 
 So Let's understand **How do we create GitHub Pages**
+- Setting >> Pages >> Select Branch as master >> /root and Save them after few seconds you will get your website link.
+![image](https://github.com/user-attachments/assets/c87331a7-a397-4481-8c71-e092cf2aa35d)
+![image](https://github.com/user-attachments/assets/c548925d-249c-48ca-ab70-934ce083c14a)
+![image](https://github.com/user-attachments/assets/34916ae4-d8ac-4857-934d-d8a0e3457c08)
 
 
 ## Miscellaneous Git Tools
+So far we have covered lot of Git Tools, Git Commands  that we use to our day to day very frequently used in project.
+But Here We will see some **Miscellaneous Git Commands, Miscellaneous Git Tools** that sometime you use for some additional benefits that Git provides to you.
+
+### Display the changes in a commit
+```shell git show <commit_id>```
+
+☝️ You can actually look what changes you have amde in any specific commit.
+
+How would you know the long (40 Char SSH Key ID) commit_id, So don't worry you only have to put first 4 character of your commit_id 
+
+By the way GitHub gives you this feature in GUI format. Click on any commit >> You can see what file has been changed added modified deleted etc
+
+So If you want to see details of your specific commit the taken commit id 
+![image](https://github.com/user-attachments/assets/2946bd3d-531e-45b6-94d7-4072d425c3fb)
+
+### Stashing
+Let's see Stashing, **Stashing** is a concept in git. What is Stashing? Why do we use Stashing?
+So sometime it happens let say you're working on a new feature called cool feature.So you're working on this feature, creating files and folders modifying it in a meantime your boss manager calls and says you have to immediately work on a bug that happened/occured in a Home page of our website.So Now you have to fix very very import bug in Home Page of your website.
+
+So right now you're in a situation if you go back to different branch then you loose your work of the feature that you're currently working on cool.html bcuz it is not completed you also don't want to commit it.
+
+One way is that you can commit whatever you have done in your feature cool working on then come to home.html and start fixing the bug immediatly once it is done again you go to your feature cool from where you commited and start working on that. BUT but but This way will create unnecessary commits time and again and you will be ended up with lots of commits which makes your history very vague or irrelevant.
+So you don't want to commit those changes right now bcuz the task is not done yet. So here **Stashing** come into picture, So what stashing will do is It takes the dirty stage or the dirty area of your working directory like your newly added files or files in staging area or untracked files that are modified  or unfinished changes etc and Stashing store it in a format of stack somewhere in stack memory. You don't have to commit this. Now without worrying about loosing the changes you can go back to Home.html work there fix the bug come back and start working on your feature cool.html
+
+> **Sometime you don't want to commit changes and you want to move to different branch but moving to different branch is not possible if your working directory is not clean, your branch is not clean** So Stashing helps you there. This is why Stashing is required.
+
+> **Stashing takes the dirty state of your working directory i.e. (your modified tracked files and staged changes) and saves it on a slack of unfinished changes that you can re-apply at any time**
+```shell
+    git stash
+    #OR
+    git stash apply
+    #OR
+    hit stash save
+    ## all of them are same only   
+```
+
+![image](https://github.com/user-attachments/assets/45f0c780-9b33-4347-9e7d-c50b826ff4f2)
+Once you git stash, you can move to different branch and go work there without worrying about your feature cool bcuz it is already stashed.
+It says Saved Working directory.
+![image](https://github.com/user-attachments/assets/c310d6df-e6e0-4213-86d2-8e3d854acac8)
+Here Now we're working on imediately on urgent fixed in main branch Home.html
+
+Now we will see How we will apply slashing to get back to our feature branch cool.html and start working on it
+
+### Apply Slashing
+Let's see How do we go back to the cool branch and get the same file.
+You can create multiple stashes and also stash uses gi diff internally.
+To see all stashes that you created use command ```shell git stash list```
+![image](https://github.com/user-attachments/assets/c4792888-702f-4481-806b-2ce66a3fc004)
+To get back the stash you want use command ```shell git stash apply <stash name>```
+![image](https://github.com/user-attachments/assets/b0457760-f787-4b2a-8e2b-436d4b8635f5)
+
+Now meanwhike you're working you again get urgent task. So you can create another stash 
+So check the how many stashes are there? ```shell git stash list``` you'll have only one stash@{0} and you need the new stash so you can delete this stash ```shell git stash drop stash@{0}```
+![image](https://github.com/user-attachments/assets/36cfa813-31c6-4f45-8298-8cfc8b269d13)
+Now You want to create another one ```shell git stash ```
+
+Sometime It becomes important that you're working on a feature and you have to move to a different branch So you can stash those changes & it will be stored in stack.
+
+### Cleaning Working Repository
+So Another Solution for the problem of dirty Working directory is - Just clean your working directory ```shell git clean``` delete the every change that you made after that particular commit.
+
+- **You may not want to stash some work or files in your working directory, but simply get rid of them; that's what the git clean command is for**
+```shell git clean -f -d``` -f & -d stands for forcefully deleting all the directory
+
+But we can simply delete the file, why this **git clean** command is there?
+If you have create/made/change one file you can manually delete that. But by any chance if you created/changed/madified different-2 lots of file and you don't remember what changes you have made in which files then you can't delete those changes manually and still you want to clean your working directory. You want to go back to the last commits which you made. So How can we do this is ```shell git clean -f -d```
+
+Now Suppose you created a dummy.html in your cool_branch and in meantime you got a call to work on main branch. So You have to jump to main branch but you don't want to stash your changes in cool_branch neither you want to commit. So what you can do is - clean your working directory ```
+
+![image](https://github.com/user-attachments/assets/d16fbf6e-1775-42b7-9baf-646df2607b98)
+
+
+### Changing the Last Commit
+History is like commits or past versions that you made in the process of building your entire project.
+
+So this topic is known as **Re-Writing History** which means changing the commits which basically means either you want to change some files or change messages or you want to create a branch from your any previous commit. So what we can do is Go back to the history and that's the whole purpose of Git bcuz we have saved everything in these versions/commits. So we can easily rollback to the previous commits.
+
+The whole idea of git is to provide this funtionality
+
+Most often funtionality or use case of re-writing history is How do you change the last commit that you made?
+And this is most often or many times happens. Why this happens? let's say you made a commit and then you realized by mistake, I have added a file that I don't want to add or may be I have not added the file that I actually wanted to add or I have made a typo in the message. So the last commit is the most often modified by the developers.
+
+So, Let's understand How to modify the last commit that you just made?
+For Example in our case manager told us to fix a bug in Home.html master branch. So If you look at the history/commit/version ```shell git log --oneline```
+So last commit was Very important fixed in Home.html but that was not a fixed actually I had just added a line of code. ypu can check ```shell git show <commit_id>``` 
+So wrote a wrong message over there on last commit and Now I want to rename/rewrite/change that message. This happens most often many a time.
+![image](https://github.com/user-attachments/assets/393d4c12-875f-42f6-a1a5-0498c06fb276)
+
+Changing the message of the last commit
+```shell git commit --amend```
+What it will do is open a text editor **Vim Text Editor** This we have already used when we got Merge Conflict.
+![image](https://github.com/user-attachments/assets/196c16bf-7811-420f-9983-9354e56642d1)
+What you can do is :- esc + i to write on Vim Text editor and the esc + : wq hit enter
+![image](https://github.com/user-attachments/assets/18c70f36-153d-430e-b29f-67cb66716431)
+
+So This is like a most important tool that you should know How to change the last commit you have made.bcuz most often you made mistake in last commit.
+
+### Changing the Last Commit
+Let's see How do we make the actual change in the last commit which we made.
+
+If i wanted to add more file or wanted to more modification in same commit which was my last commit then How can I do that?
+Here idea will remain same command will remain same.
+```shell git commit --amend```
+- Changing the actual content of the last commit.
+  - Step 1. Make changes in the working directory
+  - Step 2. Add files to the satging area
+  - Step 3. Instead of writing new commit we will Run the same command **git commit --amend**
+
+Let say instead of just changing the last commit message what I want is to change the content or make modification the file Home.html and that too in the same last commit.
+![image](https://github.com/user-attachments/assets/bb5323b7-a70b-41b2-811d-5f3f51c8254d)
+Again It will ask me Information of what commit message do you want to give? you want to change the commit message do it otherwise skip it esc + : + wq hit enter.
+![image](https://github.com/user-attachments/assets/facbed98-a3ed-40b1-9098-2fdf77dc06d5)
+![image](https://github.com/user-attachments/assets/b9f53683-720f-412b-a02a-63f04073f473)
+
+Similarly if you want to delete, modify, add a new line etc you can do in the same last commit.
+
+It is not necessarily that you can change only last commit you can change last 3 commits as well.
+
+### Checkout Commit
+Now, Let's see How do we go back to the past any commit that we want?
+
+- We can travel the time to go in the past to any specific commits
+  ```shell git checkout <commit_id>```
+
+Earlier We have used **checkout** to go from one branch to another branch. So checkout is not only for the branches, it can be used at different-2 places. basically checkout simply means I want to go there.
+
+Suppose You want to go to a specific version which is one of the initial commit and why I want to go there bcuz inside that commit there is a folder and there I created a very important file/code. Since I don't have this abc folder I want to go back this commit and I want to understand what all files we had.And i want to take one important file out and use this file as my new feature or use the code written inside.
+
+So Let's do it :-
+1. Check your project history/commits/versions ```shell git log --oneline```
+2. Pick and copy the commit_id from where you want to go
+3. Do ```shell git checkout <commit_id>```
+A lot of files and folders after that specific commit will be deleted  from your local git repository.
+![image](https://github.com/user-attachments/assets/1f3f26d8-b10e-46f1-bf13-572149cffa6f)
+![image](https://github.com/user-attachments/assets/7b4882fc-806b-474b-9e0f-f5d0175940d4)
+
+But Why I back to this same commit.
+
 
 ## Rewriting History
 
