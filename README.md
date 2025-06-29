@@ -411,6 +411,71 @@ Then from your GitHub Home page create a pull request to original source from wh
 ![image](https://github.com/user-attachments/assets/0bc3e720-e2e4-4218-a7a1-fd04655b58cb)
 
 ### Merging a Pull Request
+Let's see "How we merge Pull Request?"
+By the way Merging Pull Request is not in your hand.If you're not the owner/maintainer of the project.
+Example - Tensorflow Project or Repository, You don't own that repository. So you can't merge the pull request. You can just create a pull request, the maintainer of the project will merge if they find that your pull request makes some sense and you have done a good job like created a feature or fixed some bug.
+
+So, Let's see this as if you're a maintainer of the project and someone sent you a pull request Now you have to merge it.
+- In this case, you will see pull request notification in Pull request tabb of your Project/Repository page
+- Click see there who sent you request, what changes are being made, is it make sense? or you want modification then based upon that leave a comment on the pull request
+- The person who send you this Pull request will get notified about your comment.
+- He might be modify the changes, add it and made another commit then push it to his profile GitHub repository from there again he will open the pull request
+- Now Maintainer of the project will see the Pull Request and once they satisfied they will merge it with another commit with comments 
+- Now the maintainer will not see any open pull request and the changes has been added to the main project and all the commits will be there.
+
+> This is How we open a pull request? and How do we merge the Pull request?
+> By the way if you're a contributor to any project so don't worry!
+
+### GitHub Issues
+So there are something know as **Issues** in GitHub.
+Again Suppose you're a maintainer of the Project and developers and contributors are contributing to your project.
+Inside your project/repository you can see sections like <>code,▫️**Issues**, Pull requests, Actions, Projects, Insights, Settings sections
+![image](https://github.com/user-attachments/assets/2386a382-f4e0-4e15-a9c8-2961c35d0276)
+
+As a maintainer of the project you will see the **Issues** section, Generally what maintainer do in issue section is Create Issue of Project for people who want to contribute can see the issue and know what are the issues on this project and then contribute. 
+For Example - If there is a bug, If you're a project manager you know there is a bug/issue and if you want to fix this you can write it in Issue section if any contributor come in and see the bug and they fix it.
+
+So, Issues are like topic.
+
+So as a maintainer of the project let's create a new issue
+- Go to Issue Section >> New Issue >> Title it as "create an Algorithm" and If you want write description, "Create a folder & Write all seaching and sorting alogorithms in c++ and send PR" and lebel it accordingly like "good first issue" or "bug" etc.
+
+Now a new developer come to your repository, what he will do is He will see that there is one issue that is available in this repository and also label as good first issue that means it's for beginners and also he will read the description and he will get to know what he has to do.
+- He will forked the repository to his GitHub account from there he will clone that repository to his Local Machine Git repository He will make the changes add those changes and make commits and then push it to his GitHub repository and from there He will create a pull request and that request will go to the original source repository from the repository was forked and the maintainer of the repositoy will see in his project there is a Pull Request and then will see  who created this pull request what changes are being made does it make sense if yes owner will merge the pull request with a commit and message.
+- Now maintainer of the project will close the Issue with Comment as it is solved!!.
+- Like this new bug new issue will open and close and the cycle will continue.
+
+> **Why Issues are there? How it is integrated with Pull Request? Pull Request - sending a pull request, opening a pull reqeuest, Creating an Issue** is how you contribute to any open source software.
+> If you do all these things that means you're contributing to a open source software.
+
+
+### Sync git and GitHub Repo with Upstream
+Let's again suppose you're a owner/maintainer of a project. Developer A comes to your repository and sees there is an issue and this is for beginner So he reads the description and all. And Now he wants to contribute So He forked the repository, clone it to local git and made changes and commits and push the code to his Github forked repository and Created a Pull request now Maintainer of the Original Project accepts his pull request and merged it with commit and now new file is being added to the main project.
+
+But but but What If Owner/maintainer added one file to the original repository or let say another contributor added a file to original repository. Then As a contributor you will be 2 or 3 commits behind the original source repository. Now as a individual developer you want to same code which is being recently committed in original source repository into your forked repository. So How do you that? 
+- Basically as a developer you want Synchronization of the forked repository with the Upstream which is original source repository.
+   - So You can do this by going to the section **fetch upstream** >> fetch and merged
+   - Now your forked branch is sync with the original source repository with same commits.
+> This is how we sync our forked repository with upstream i.e the Original source repository.
+
+- If you go to your local git repository, and you check the ```shell git status ``` It will shows you are up to date, up to date with your forked repository not with the original source repository
+  - This is bcuz you have only remote for your Forked GitHub repository not the original source repository
+  - ```shell git remote -v```
+  - So You can add the remote for original Source Repository from where you forked the repository, So How do we do that?
+     - Simply Go to Original Source Repository  >> Go to the Code >> Copy the HTTPS URL Link ```shell git remote add <upstream_remote> <Original Source Repo URL>```
+     - Now you will have two remotes one is origin and another is upstream_remote But here in upstream_remote you will only have permission to fetch not to push bcuz you're not the owner of the original Sorce repository
+     -  So Now you want to fetch/pull from original Souce repo, you can use the remote upstream_remote and then pull it from there ```shell git pull upstream_remote <Original Source Repo URL>```
+     -  Now all the files and folders will be downloaded and you will see them in your local git repository
+     -  And If you check the log ```shell git log --oneline``` you will all the commits
+
+
+### GitHub Pages
+It is an interesting idea or concept where you can actually Host your HTML/CSS/JS like the whole website.
+So If you have a static website that doesn't have a backend like NodeJS or Django
+
+Even if you have a dynamic website based on JavaScript like if you have only FrontEnd and you want o host it may be somewhere, then GitHub is one of the best platform to host your website like your Portfolio type of Website.
+
+So Let's understand **How do we create GitHub Pages**
 
 
 ## Miscellaneous Git Tools
