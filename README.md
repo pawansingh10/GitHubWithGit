@@ -290,6 +290,7 @@ To check How many remotes are available ```bash git remote ``` you will see only
 So here **Origin** is a remote name, by suing this remote you can push and pull to any particular repository
 
 For see details about remote ```bash git remote -v```
+
 ![image](https://github.com/user-attachments/assets/810d449c-297d-4f6c-98de-5f8505b64fed)
 
 ☝️ You'll see two links one is for fetch which means this link can be use to fetch the files and folder from GitHub to your local Git repository
@@ -300,6 +301,7 @@ But what if I don't want to name it as origin? can We add one more remote? Yes W
 ```shell git remote add myremote <url https://github.com/abc10>```
 
 So Let's add one remote
+
 ```shell git add remote myremote <url project repo link>```
 
 ![image](https://github.com/user-attachments/assets/e0f28afe-6d91-4600-9657-8ccff80890d2)
@@ -307,19 +309,23 @@ So Let's add one remote
 If we have to push something last time what we did was ```shell git push -u origin master``` , Here -u was to say this is a upstream.
 
 We have 2 ways to push/fetch our code to Central GitHub repository through you remote one through origin another through myremote it doesn't matter
+
 ![image](https://github.com/user-attachments/assets/83b1338a-a365-4b6e-a32a-6a5d66ef568f)
 
 ### Cloning a GitHub Repository
 - Here, We will see How to clone any GitHub Repository
 
 - So first go to the your GitHub Home Page, Search for the Repository you want to clone in search bar.
-  ![image](https://github.com/user-attachments/assets/5099112c-bbe8-4fc7-b454-24db6e8420ee)
+
+![image](https://github.com/user-attachments/assets/5099112c-bbe8-4fc7-b454-24db6e8420ee)
 
 - Click on that project/repo, you will get two options either you can download a zip file in GUI way or by copy the http link of the repo through command line.
-  ![image](https://github.com/user-attachments/assets/402445a1-41ac-465d-9705-59859ae7734f)
+
+![image](https://github.com/user-attachments/assets/402445a1-41ac-465d-9705-59859ae7734f)
 
 - Obviously we will do it by Git Bash Command line, first move to your folder where you want to clone/download then run the cmd ```shell git clone <url of GitHUb Repository>```
-  ![image](https://github.com/user-attachments/assets/f87c7252-c9f5-446c-81e5-1ab9f021bc6e)
+
+![image](https://github.com/user-attachments/assets/f87c7252-c9f5-446c-81e5-1ab9f021bc6e)
 
 - Now you can make changes in the file and play around these make commits and all but all on your local Git Repository.
 - If you want to make changes or contribute to the other you can't do it here. We will see that in next section.
@@ -357,6 +363,7 @@ So If you check what are your remotes, remotes are like this local repository is
 We have 2 remotes origin and myremote both are referencing or pointing to the same central repository which is our GitHub Repository. So we can use any of them.
 
 Now, ```shell git fetch ``` will be fine if you have only one branch which is in this case that is master branch But if you have multiple branches over there on your central repository in that case you have to specify from which branch and by which remote you want to fetch ```shell git fetch origin master```
+
 ![image](https://github.com/user-attachments/assets/772c51c8-5077-41f1-a0bd-1d173569cc17) ![image](https://github.com/user-attachments/assets/0a7edec5-a8d8-4d36-a4ed-de398e8904b7)
 
 So the last commit from Central GitHub Server Repository  master branch has been downloaded to your local git repository, but you will not see that commit into your local git working directory that's bcuz git fetch only do chnages from central server to local git repository there is one more step if you want to see the changes into your local working directory is ```shell git merge <remote><branch>```.
@@ -376,6 +383,7 @@ Ans - To overcome the two commands ```shell git fetch origin master``` and  ```s
 > There is disadvantage also.
 
 Now suppose another developer added files to central github repository and made commits now you want to pull it So lets see how we can do it by git pull instead of git fetch like last time
+
 ![image](https://github.com/user-attachments/assets/a010c431-73bf-473c-9c66-76cb30defdf9)
 
 One Question will arise, Out of git fetch and git pull which one should be preferred?
@@ -803,6 +811,23 @@ Let's see that - For example suppose you want the changes from history_branch sp
 
 
 ## Project - Web Portfolio
+Let's see How to create a portfolio?
+Here, We will learn HTML, CSS and Bootstrap. Using these 3 web technology, We're going to build landing page, contact page and about page of our website.
+
+### What are we going to build?
+A website for personal portfolio.
+
+This is the basic structure for our portfolio.
+![image](https://github.com/user-attachments/assets/730e1682-8364-4ea0-970a-20975ef5c85d)
+
+### Clean your MyPortfolio
+- Check git status
+- Add it to staging area
+- commit it with message "Clean code"
+
+### Creating Navigation in your Portfolio
+
+
 
 ## Excercises
 
