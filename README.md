@@ -616,11 +616,62 @@ So Let's do it :-
 1. Check your project history/commits/versions ``` git log --oneline```
 2. Pick and copy the commit_id from where you want to go
 3. Do ``` git checkout <commit_id>```
+
 A lot of files and folders after that specific commit will be deleted  from your local git repository.
 ![image](https://github.com/user-attachments/assets/1f3f26d8-b10e-46f1-bf13-572149cffa6f)
 ![image](https://github.com/user-attachments/assets/7b4882fc-806b-474b-9e0f-f5d0175940d4)
 
-But Why I back to this same commit bcuz I wanted to go back 
+But Why I back to this same commit bcuz I wanted to go back same commit and wanted to see what's inside the folder which is imp for me blah blah blah...
+Now Let's see the message we got after traveling to the specific commit
+
+![image](https://github.com/user-attachments/assets/b9c83359-6073-4aef-b887-4bb1d7eb0ba5)
+It clearly says that We're not in master so what actually happened. HEAD detached!!
+We have lots of commits and master will always at last commit and most of the time head also moves with branch. But here what happened actually is we detached the HEAD and took this HEAD from last commit to that specific commit_ID.
+Now If you want to make some changes or build a feature from this moment/commit. Let's create a new branch from there nobody stops you. Go ahead.
+And again you can come back to master branch also. We will see How? ``` git switch -``` It will take you to master by moving HEAD from current specific commit_ID to master branch last commit.
+
+4. To Return back to Master branch last commit Do  ``` git switch -```
+
+![image](https://github.com/user-attachments/assets/53e8e30a-6267-4e28-82b7-0e437d60a1be)
+
+### Making new branch from the old commit
+
+1. So first check the branches available ```git branch -v```
+2. Then check the log ```git log --oneline```
+3. Go Back to the specific old commit from where you want to create a new branch for that copy Commit_ID
+4. Move to that commit_ID ```git checkout <commit_ID>``` Now you're on a specific commit which you want which is different from your master branch last commit.
+5. Now suppose you're making the changes in the file added it and committed it and you're doing same and added another commit.
+6. Now If you want to move to the master branch where your HEAD was, by writing ```git swtich -``` then what git will say is - You made some commits to this branch by coming to this specific commit and Now If you do not save them in a different branch then I will delete them but if you create different branch then you can come back to any branch to this and start working on that branch. It's so easy.
+7. So, To create a new branch we use this command ```git switch -c <branch_name>``` and the commits you made will go into this branch. But this history branch will not be created from the master branch rather it is created from the specific commit point.
+![image](https://github.com/user-attachments/assets/e2a4102a-be2e-4d76-aabe-1bf4fc6ec24c)
+![image](https://github.com/user-attachments/assets/eaf4867d-0cc8-4754-99f2-45b54c94aaab)
+![image](https://github.com/user-attachments/assets/4d1e7025-aec7-455c-bfb9-383053e97390)
+
+> Isn't this magical? This is whole crux of Git. For this purpose only we use git.
+> Now you know, you can go back to the anywhere in the time and can change or modify or create file or create a new branch from any specific commit.
+
+8. Now If you want to keep this feature pause and want to come back to master branch let's do that ```git checkout master```
+![image](https://github.com/user-attachments/assets/4a3538b2-76ae-400a-b9d1-3bed2791c603)
+![image](https://github.com/user-attachments/assets/5df4deef-e921-4029-8bcb-ca58784a851b)
+
+
+### Revert Commit
+Here, We will see few DANGEROUS 💀 commands! You need to be very cautious while using them.
+
+1. How do you Revert any commit?
+Once you have made a commit and it has shown its behavior or nature you want to undo it.
+For that purpose we use revert, By the way we can't delete any commit.
+Example- If you added one line and commited then  in revert what we will do is delete that line but It appears that we have deleted that commit but eventually you're not deleting.
+
+Let's see How do we revert a commit?
+You can undo the changes of any commit that you want.
+``` git revert <commit_ID>```
+
+Since these commands are slightly dangerous, they can may be result into merge conflict or loss of the code
+Be cautious, so first switch from master branch to new branch ```git checkout cool_branch```
+see the difference in the file
+![image](https://github.com/user-attachments/assets/eaa07747-ae98-4ce4-bc90-b6acedbe8cc7)
+
 
 
 ## Rewriting History
