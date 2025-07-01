@@ -826,8 +826,75 @@ This is the basic structure for our portfolio.
 - commit it with message "Clean code"
 
 ### Creating Navigation in your Portfolio
+- Modify Index.html
+- Modify About.html
+- Modify Project.html
+- Modify Contact.html
+  
+### Portfolio Website is ready to be LIVE
 
+Now add one more section skill.html
 
 
 ## Excercises
 
+### Maintaining a Project
+In this assignment, you will practice creating a git project host it on Github and maintain the project with the latest code between the multiple branches.
+
+Maximum time: 180 minutes
+
+
+- **Assignment Instructions**
+
+This assignment checks your Git/Github skills.
+
+You should follow the steps given in the question step by step.
+
+You can refer to the course in between if you are stuck somewhere in between.
+
+Do not copy-paste any command. Writing full commands always helps in remembering the commands in the beginning phase.
+
+The maximum time duration is 3 hours.
+
+
+
+**Question:**
+
+**Tom owns an IT company named ‘ABC’ with 2 websites. He had a company with 2 employees earlier and they both were working on 1 website each. Now his company has grown and he has hired 8 more employees, now 5 employees working on each project.**
+
+**They are facing issues sharing and updating the code. So they decided to use git as a platform to share and update code among the employees. But no one knows how to set up and use git/github.**
+
+
+
+These are the things they need to set up as a git project. Can you help to set up the project with the following requirements:
+
+
+
+- A private/public Github repository for the website.
+
+- Include the README.md file to add the description of the project and the instructions to contribute to the project.
+
+- Also add a .gitignore file to ignore all the irrelevant files/folder [do add a few files accordingly].
+
+- There must be two branches main and development.
+
+- Starting committing and pushing the code to the development branch.
+
+- Both branches must have the latest code but the development branch should be used to push the code and then merge the changes from development to the main branch once the maintainer is happy with the code quality.
+
+
+
+Feel feel to make multiple commits and create something meaningful in your project repository.
+
+
+
+**Solution:**
+
+This is a case study based assignment, and hence there is no right or wrong solution. If you're stuck while solving the assignment, feel free to ask doubts in the QnA section. :)
+
+
+
+Keep learning!
+Thank You!!
+
+O------------------------------O---------------------------------O
